@@ -13,3 +13,52 @@ services:
 networks:
   internalnet:
     driver: bridge
+
+
+
+
+
+
+    name: despliegue-docker
+services:
+  mi-app:
+    build:
+      context: /home/camilo/Documentos/despliegue-docker
+      dockerfile: Dockerfile
+    container_name: bulc-perros
+    expose:
+      - "80"
+    image: bulc-perros:v0
+    ports:
+      - mode: ingress
+        target: 80
+        published: "80"
+        protocol: tcp
+    volumes: []
+    devices: []
+    cap_add: []
+    command: []
+    environment: []
+    privileged: false
+    restart: unless-stopped
+    hostname: bulc-perros
+    cpu_shares: 90
+    deploy:
+      resources:
+        limits:
+          memory: 7940M
+    network_mode: host
+networks:
+  internalnet:
+    name: despliegue-docker_internalnet
+    driver: bridge
+x-casaos:
+  hostname: ""
+  scheme: http
+  index: /
+  port_map: 80
+  author: self
+  category: self
+  icon: ""
+  title:
+    custom: perros-app
