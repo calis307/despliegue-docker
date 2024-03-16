@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="mt-5 text-center txt-shadow">Juego del Ahorcado</h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8 text-center cont p-4">
+      <p class="text-white mb-3">
+        <strong>Palabra: {{ palabraMostrada }}</strong>
+      </p>
+      <p class="text-white mb-3">
+        <strong>Letras usadas: {{ letrasUsadas.join(", ") }}</strong>
+      </p>
+      <input
+        type="text"
+        [(ngModel)]="letraIngresada"
+        maxlength="1"
+        class="form-control mb-3"
+        placeholder="Ingresa una letra"
+      />
+      <button class="btn btn-dark mb-3 w-100" (click)="procesarLetra()">
+        Comprobar
+      </button>
+    </div>
+  </div>
+</div>

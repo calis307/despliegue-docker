@@ -1,0 +1,13 @@
+<!-- La maquetación del esqueleto principal está hecha con clases de Bootstrap en vez de un grid en CSS vanilla. Cada componente es un row. Dentro del main hay 2 componenetes donde cada uno ocupa una cantidad de columnas, según el tamaño de la pantalla. Las medidas especificas son solo para el componente app-content ya que contiene el botón para ocultar/mostrar el sidebar.
+De esta manera la página es totalmente responsive en los 3 dispositivos principales (escritorio, tablet y celulares) y el código es mucho más limpio. -->
+<div class="container-fluid">
+  <app-navbar class="row sticky-top"></app-navbar>
+  <main class="row flex-nowrap overflow-auto">
+    <app-sidebar class="col-auto px-0 sidebar-cont"></app-sidebar>
+    <app-content class="col-1 pt-2 px-1"></app-content>
+    <div class="col ps-md-2 pt-3">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <app-footer class="row"></app-footer>
+</div>

@@ -1,0 +1,26 @@
+.menu-button {
+  color: var(--purple-complementary);
+  border: 2px solid rgb(159, 144, 162);
+  background-color: var(--bg-color);
+  opacity: 0.9;
+}
+
+.puntitos {
+  display: none;
+}
+
+.menu-button:hover {
+  opacity: 1;
+}
+
+@media (width <= 1110px) {
+  .barras {
+    display: none;
+  }
+  .menu-txt {
+    display: none;
+  }
+  .puntitos {
+    display: inline;
+  }
+}

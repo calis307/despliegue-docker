@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-center p-5">
+    <h1 class="txt-shadow text-center">Razas de Perros</h1>
+    <div class="col-lg-8 text-center cont p-4">
+      @if(imagen) {
+      <div class="text-center">
+        <img [src]="imagen" class="img-fluid mb-3" alt="Imagen de perro" />
+      </div>
+      } @else {
+      <h4 class="text-center">Cargando imagen...</h4>
+      }
+
+      <ul class="list-group">
+        @for(raza of razas; track raza) {
+        <li class="list-group-item">
+          {{ raza }}
+          <button
+            class="btn btn-dark btn-sm float-end"
+            (click)="cargarImagen(raza)"
+          >
+            Ver Imagen
+          </button>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>

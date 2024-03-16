@@ -1,0 +1,8 @@
+.navbar {
+  background-color: var(--bg-color);
+  position: sticky;
+}
+
+.btn {
+  background-color: var(--purple-complementary);
+}

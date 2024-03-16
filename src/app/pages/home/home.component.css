@@ -1,0 +1,84 @@
+.home-container {
+  min-height: 80vh;
+}
+
+.txt-shadow {
+  -webkit-text-stroke: 1px var(--purple-complementary);
+  text-shadow: 0px 2px 4px black;
+  font-weight: bold;
+  color: var(--purple-complementary);
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.22),
+    1px 0px 0px 0px rgba(0, 0, 0, 0.22), 1px 2px 0px 0px rgba(0, 0, 0, 0.22),
+    2px 1px 0px 0px rgba(0, 0, 0, 0.22), 2px 3px 0px 0px rgba(0, 0, 0, 0.22),
+    3px 2px 0px 0px rgba(0, 0, 0, 0.22), 3px 4px 0px 0px rgba(0, 0, 0, 0.22),
+    4px 3px 0px 0px rgba(0, 0, 0, 0.22), 4px 5px 0px 0px rgba(0, 0, 0, 0.22),
+    5px 4px 0px 0px rgba(0, 0, 0, 0.22), 5px 6px 0px 0px rgba(0, 0, 0, 0.22),
+    6px 5px 0px 0px rgba(0, 0, 0, 0.22), 6px 7px 0px 0px rgba(0, 0, 0, 0.22),
+    7px 6px 0px 0px rgba(0, 0, 0, 0.22), 7px 8px 0px 0px rgba(0, 0, 0, 0.22),
+    8px 7px 0px 0px rgba(0, 0, 0, 0.22);
+}
+
+.card-header {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.but1 {
+  background-color: rgba(195, 14, 46, 0.5);
+}
+.but2 {
+  background-color: rgba(133, 69, 202, 0.5);
+}
+.but3 {
+  background-color: rgba(68, 193, 237, 0.5);
+}
+.but4 {
+  background-color: rgba(40, 40, 40, 0.5);
+}
+
+.btn:hover {
+  scale: 1.1;
+  filter: brightness(120%);
+}
+
+h1 {
+  animation: right-to-left 1s ease-in-out 1 forwards;
+}
+
+blockquote {
+  animation: left-to-right 1s ease-in-out 1 forwards;
+}
+
+/* Animaciones */
+@keyframes right-to-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(+20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

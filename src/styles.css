@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Cabin:ital,wght@0,700;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+:root {
+  /* SCSS RGB */
+  --bg-color: rgba(0, 0, 0, 0.9);
+  --swamp-green: rgba(73, 255, 24, 0.5);
+  --purple-complementary: rgba(206, 24, 255, 0.7);
+  --medium-slate-blue: rgba(139, 86, 254, 1);
+  --hunyadi-yellow: rgba(246, 174, 45, 1);
+  --russian-violet: rgba(55, 34, 100, 1);
+  --red-violet: rgba(204, 29, 136, 1);
+  --deep-sky-blue: rgba(0, 187, 249, 1);
+}
+
+:host {
+  font-family: "ABeeZee", sans-serif;
+}
+body {
+  background-image: url(assets/images/background-7.jpg);
+  backdrop-filter: contrast(130%) blur(4px);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}

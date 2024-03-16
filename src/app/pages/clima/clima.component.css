@@ -1,0 +1,77 @@
+.card {
+  background-color: #dcdbdb;
+  border-radius: 50px;
+  color: #6f707d;
+  /* font-family: "Marcellus", serif; */
+}
+
+#heading {
+  font-size: 55px;
+  color: #2b304d;
+}
+
+.temp {
+  place-items: center;
+}
+
+.temp-details > p > span,
+.grey {
+  color: #a3acc1;
+  font-size: 12px;
+}
+
+.fa {
+  color: #b1aca5;
+}
+
+*:focus {
+  outline: none;
+}
+
+.btn {
+  background-color: var(--purple-complementary);
+}
+
+.txt-shadow {
+  color: white;
+  -webkit-text-stroke: 1px var(--purple-complementary);
+  text-shadow: 0px 2px 4px black;
+  font-weight: bold;
+  color: var(--purple-complementary);
+}
+
+.contenedor {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.22),
+    1px 0px 0px 0px rgba(0, 0, 0, 0.22), 1px 2px 0px 0px rgba(0, 0, 0, 0.22),
+    2px 1px 0px 0px rgba(0, 0, 0, 0.22), 2px 3px 0px 0px rgba(0, 0, 0, 0.22),
+    3px 2px 0px 0px rgba(0, 0, 0, 0.22), 3px 4px 0px 0px rgba(0, 0, 0, 0.22),
+    4px 3px 0px 0px rgba(0, 0, 0, 0.22), 4px 5px 0px 0px rgba(0, 0, 0, 0.22),
+    5px 4px 0px 0px rgba(0, 0, 0, 0.22), 5px 6px 0px 0px rgba(0, 0, 0, 0.22),
+    6px 5px 0px 0px rgba(0, 0, 0, 0.22), 6px 7px 0px 0px rgba(0, 0, 0, 0.22),
+    7px 6px 0px 0px rgba(0, 0, 0, 0.22), 7px 8px 0px 0px rgba(0, 0, 0, 0.22),
+    8px 7px 0px 0px rgba(0, 0, 0, 0.22);
+}
+
+.contenido {
+  width: 60%;
+}
+
+@media (width <= 768px) {
+  .contenido {
+    width: 100%;
+  }
+}
+
+.btn:hover {
+  scale: 1.02;
+  filter: brightness(120%);
+}
+
+input {
+  opacity: 0.5;
+}
+
+input:focus {
+  opacity: 0.8;
+}

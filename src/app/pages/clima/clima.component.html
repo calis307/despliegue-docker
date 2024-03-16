@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row justify-content-center p-5">
+    <h1 class="text-center txt-shadow">Aplicación del Clima</h1>
+    <div class="col-lg-8 contenedor p-4">
+      <input
+        type="text"
+        [(ngModel)]="ciudad"
+        placeholder="Ingrese una ciudad"
+        class="form-control mb-3"
+      />
+      <button
+        (click)="buscarCiudad()"
+        id="botonBusqueda"
+        class="btn btn-dark w-100 mb-3"
+      >
+        Buscar
+      </button>
+      @if (datosClima) {
+      <div class="card p-4 mt-3" id="datos-clima">
+        <div class="d-flex">
+          <h6 class="flex-grow-1">{{ datosClima.paisNombre }}</h6>
+          <h6 class="flex-grow-1">{{ datosClima.ciudadNombre }}</h6>
+          <h6>{{ datosClima.hora }}</h6>
+        </div>
+
+        <div class="d-flex flex-column temp mt-5 mb-3">
+          <h1 class="mb-0 font-weight-bold" id="heading">
+            {{ datosClima.temperatura }}&deg; C
+          </h1>
+          <span class="small grey">{{ datosClima.descripcion }}</span>
+        </div>
+
+        <div class="d-flex">
+          <div class="temp-details flex-grow-1">
+            <p class="my-1">
+              <img src="https://i.imgur.com/B9kqOzp.png" height="17px" />
+
+              <span> {{ datosClima.viento }} km/h </span>
+            </p>
+
+            <p class="my-1">
+              <i class="fa fa-tint mr-2" aria-hidden="true"></i>
+              <span> {{ datosClima.humedad }}% </span>
+            </p>
+
+            <p class="my-1">
+              <img src="https://i.imgur.com/wGSJ8C5.png" height="17px" />
+              <span> {{ datosClima.tempMax }}&deg; C </span>
+            </p>
+          </div>
+
+          <div>
+            <img [src]="datosClima.icono" alt="Icono del clima" width="100px" />
+          </div>
+        </div>
+      </div>
+      }
+      <!-- @else if(datosClima.error) {
+      <h1 class="text-center">Clima no disponible</h1>
+      } -->
+    </div>
+  </div>
+</div>

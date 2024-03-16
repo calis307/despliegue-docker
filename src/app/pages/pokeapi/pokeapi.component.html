@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row justify-content-center p-5">
+    <h1 class="txt-shadow text-center">Buscar Pokémon por nombre</h1>
+    <div class="col-lg-8 text-center cont p-4">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control mb-3"
+          [(ngModel)]="pokemonName"
+          placeholder="Nombre del Pokémon"
+        />
+      </div>
+      <button class="btn btn-dark mb-3 w-100" (click)="getPokemonDetails()">
+        Buscar
+      </button>
+
+      @if (pokemon) {
+      <div class="mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">{{ pokemon.name }}</h2>
+            <p class="card-text">ID: {{ pokemon.id }}</p>
+            <p class="card-text">Peso: {{ pokemon.weight }}</p>
+            <p class="card-text">Altura: {{ pokemon.height }}</p>
+            <h3 class="card-text">Habilidades:</h3>
+            <ul class="list-group list-group-flush">
+              @for(ability of pokemon.abilities; track ability){
+              <li class="list-group-item">
+                {{ ability.ability.name }}
+              </li>
+              }
+            </ul>
+            <img
+              [src]="pokemon.sprites.front_default"
+              alt="Imagen de {{ pokemon.name }}"
+              class="img-fluid mt-3"
+            />
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

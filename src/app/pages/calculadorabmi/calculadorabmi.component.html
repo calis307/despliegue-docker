@@ -1,0 +1,34 @@
+<div class="container">
+  <h1 class="mt-5 txt-shadow text-center">Calculadora de BMI</h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8 text-center cont p-4">
+      <div class="mb-3">
+        <label class="form-label text-white">Altura (metros): </label>
+        <input type="number" class="form-control" [(ngModel)]="altura" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label text-white">Peso (kilogramos): </label>
+        <input type="number" class="form-control" [(ngModel)]="peso" />
+      </div>
+      <button class="btn btn-dark mb-3 w-100" (click)="calcularBMI()">
+        Calcular BMI
+      </button>
+      @if(bmi > 0){
+      <div class="mb-3">
+        <h3 class="text-white">
+          Índice de Masa Corporal (BMI): {{ bmi | number : "1.2-2" }}
+        </h3>
+        @if(bmi < 18.5){
+        <p class="text-danger">Bajo peso</p>
+        } @else if(bmi >= 18.5 && bmi < 24.9){
+        <p class="text-success">Peso normal</p>
+        } @else if(bmi >= 24.9 && bmi < 29.9){
+        <p class="text-warning">Sobrepeso</p>
+        } @else {
+        <p class="text-danger">Obesidad</p>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>

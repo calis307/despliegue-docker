@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row justify-content-center p-5">
+    <h1 class="txt-shadow text-center">Buscar cocktail por Nombre</h1>
+    <div class="col-lg-8 text-center cont p-4">
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control mb-3"
+          [(ngModel)]="cocktailName"
+          placeholder="Nombre del Cocktail"
+        />
+      </div>
+      <button class="btn btn-dark mb-3 w-100" (click)="searchCocktail()">
+        Buscar
+      </button>
+
+      @if(cocktail){
+      <div class="mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">{{ cocktail.strDrink }}</h2>
+            <img
+              [src]="cocktail.strDrinkThumb"
+              alt="{{ cocktail.strDrink }}"
+              class="img-fluid mb-3"
+            />
+            <p class="card-text"><strong>Ingredients:</strong></p>
+            <ul class="list-group list-group-flush">
+              @for(ingredient of ingredients; track ingredients){
+              <li class="list-group-item">{{ ingredient }}</li>
+              }
+            </ul>
+            <p class="card-text">
+              <strong>Instructions: </strong>{{ cocktail.strInstructions }}
+            </p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
