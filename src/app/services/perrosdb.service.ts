@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment.prod';
 })
 export class PerrosService {
   // URL base para la API de perros
-  private baseUrl = environment.API_BASE_URL;
+  private baseUrl =  environment.API_BASE_URL;
 
   constructor(private http: HttpClient) {}
 
