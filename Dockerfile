@@ -7,4 +7,4 @@ COPY . .
 RUN npm run build
 FROM nginx:stable
 COPY --from=build /app/dist/proyecto-final-angular/browser/ /usr/share/nginx/html
-EXPOSE 8081
+EXPOSE 80
